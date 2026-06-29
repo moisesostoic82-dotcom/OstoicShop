@@ -1,49 +1,80 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
+  font-family: Arial;
   background: #0f0f0f;
-  color: #fff;
+  color: white;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(45deg, #ff6a00, #ffb300);
+  color: black;
+  font-weight: bold;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+button {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* CATEGORIES */
+#categories {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* CARROSSEL */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.carousel img {
+  width: 220px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* GRID RESPONSIVO */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+/* CARD */
+.card {
+  background: #1c1c1c;
+  padding: 10px;
+  border-radius: 10px;
   text-align: center;
 }
 
-header {
-  padding: 20px;
-  background: #111;
-}
-
-.hero {
-  padding: 50px 20px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  padding: 20px;
-}
-
-.card {
-  background: #1c1c1c;
-  padding: 15px;
+.card img {
+  width: 100%;
   border-radius: 10px;
+  cursor: pointer;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background: #ff6a00;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-}
-
-.btn:hover {
-  background: #ff8800;
-}
-
-footer {
-  padding: 20px;
-  font-size: 12px;
-  opacity: 0.7;
+h2 {
+  padding-left: 10px;
 }

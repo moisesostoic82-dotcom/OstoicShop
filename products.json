@@ -1,14 +1,29 @@
 [
   {
+    "id": 1,
     "name": "Fone Bluetooth",
-    "price": "R$ 89,90",
-    "image": "https://link-da-imagem.jpg",
-    "url": "https://shopee.com.br/SEU-LINK-AFILIADO"
+    "category": "Eletrônicos",
+    "views": 120,
+    "sales": 30,
+    "image": "https://via.placeholder.com/300",
+    "url": "https://shopee.com"
   },
   {
-    "name": "Smartwatch",
-    "price": "R$ 129,90",
-    "image": "https://link-da-imagem.jpg",
-    "url": "https://shopee.com.br/SEU-LINK-AFILIADO"
+    "id": 2,
+    "name": "Mouse Gamer RGB",
+    "category": "Periféricos",
+    "views": 80,
+    "sales": 50,
+    "image": "https://via.placeholder.com/301",
+    "url": "https://shopee.com"
+  },
+  {
+    "id": 3,
+    "name": "Teclado Mecânico",
+    "category": "Periféricos",
+    "views": 200,
+    "sales": 90,
+    "image": "https://via.placeholder.com/302",
+    "url": "https://shopee.com"
   }
 ]
