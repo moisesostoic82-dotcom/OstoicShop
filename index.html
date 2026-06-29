@@ -1,15 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <title>Ostoic Shop</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ostoic Shop</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>🛒 Ostoic Shop</h1>
+<header class="header">
+  <h1>🛒 Ostoic Shop</h1>
+  <p>Ofertas e produtos selecionados</p>
 
-<div id="products"></div>
+  <div class="nav">
+    <button onclick="goHome()">🏠 Home</button>
+    <div id="categories"></div>
+  </div>
+</header>
+
+<h2 id="title">🔥 Mais Vendidos</h2>
+
+<!-- 🎠 CARROSSEL -->
+<div id="carousel" class="carousel"></div>
+
+<!-- 🛍️ GRID -->
+<div id="grid" class="grid"></div>
 
 <script src="app.js"></script>
+
 </body>
 </html>
