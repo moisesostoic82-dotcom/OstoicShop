@@ -4,13 +4,13 @@ let filtered = [];
 fetch("products.json")
   .then(res => res.json())
   .then(data => {
-    products = data;
+    products = data || [];
 
     renderCategories();
     goHome();
   });
 
-/* 🏠 HOME - MAIS VENDIDOS */
+/* 🏠 HOME */
 function goHome() {
   filtered = [...products].sort((a, b) => {
     return (b.sales + b.views) - (a.sales + a.views);
@@ -23,10 +23,16 @@ function goHome() {
 
 /* 🔘 CATEGORIAS */
 function renderCategories() {
-  const cats = [...new Set(products.map(p => p.category))];
   const div = document.getElementById("categories");
 
   div.innerHTML = "";
+
+  if (products.length === 0) {
+    div.innerHTML = `<button disabled>Sem categorias</button>`;
+    return;
+  }
+
+  const cats = [...new Set(products.map(p => p.category))];
 
   cats.forEach(cat => {
     div.innerHTML += `
@@ -50,10 +56,12 @@ function renderAll() {
   renderGrid();
 }
 
-/* 🎠 CARROSSEL ALEATÓRIO */
+/* 🎠 CARROSSEL */
 function renderCarousel() {
   const div = document.getElementById("carousel");
   div.innerHTML = "";
+
+  if (filtered.length === 0) return;
 
   let shuffled = [...filtered].sort(() => 0.5 - Math.random());
 
@@ -68,6 +76,16 @@ function renderCarousel() {
 function renderGrid() {
   const div = document.getElementById("grid");
   div.innerHTML = "";
+
+  if (products.length === 0) {
+    div.innerHTML = `
+      <div style="padding:20px; text-align:center; opacity:0.7;">
+        <h2>0 produtos</h2>
+        <p>Adicione produtos no sistema</p>
+      </div>
+    `;
+    return;
+  }
 
   filtered.forEach(p => {
     div.innerHTML += `
